@@ -123,5 +123,30 @@ $order->shipmentAddressFull = [
 $order->create();
 ```
 
+## Обновление заказа
+
+Чтобы изменить заказ, задайте `id` нужной сущности и передайте обновляемые поля в метод `update()`. Поля можно задать как параметром метода, так и через свойства объекта.
+
+```php
+use Evgeek\Moysklad\Api\Record\Objects\Documents\CustomerOrder;
+use Evgeek\Moysklad\MoySklad;
+
+$ms = new MoySklad(['token']);
+
+// Вариант 1: поля в параметре update()
+CustomerOrder::make($ms, ['id' => 'c7a48c56-f252-11ed-0a80-0f6000639033'])
+    ->update([
+        'name' => '10045',
+        'shipmentAddress' => 'Новый адрес доставки',
+    ]);
+
+// Вариант 2: поля в свойствах объекта
+$order = CustomerOrder::make($ms);
+$order->id = 'c7a48c56-f252-11ed-0a80-0f6000639033';
+$order->name = '10045';
+$order->shipmentAddress = 'Новый адрес доставки';
+$order->update();
+```
+
 | [<< Объектный подход (Record)](/docs/active_record.md) | [Оглавление](/docs/index.md) | [Форматтеры >>](/docs/formatters.md) |
 |:-----------------------------------------|:----------------------------:|-------------------------------------:|
