@@ -16,6 +16,7 @@
     * [Вложенные сущности](/docs/active_record.md#вложенные-сущности)
     * [Универсальные методы](/docs/active_record.md#универсальные-методы)
     * [Расширяемость](/docs/active_record.md#расширяемость)
+    * [Пример создания заказа](/docs/customerorder_example.md)
 * [Форматтеры](/docs/formatters.md)
   * [Общая информация](/docs/formatters.md#общая-информация)
   * [Простые типы](/docs/formatters.md#простые-типы)
