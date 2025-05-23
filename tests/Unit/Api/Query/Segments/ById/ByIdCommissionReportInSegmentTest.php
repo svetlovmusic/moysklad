@@ -4,6 +4,7 @@ namespace Evgeek\Tests\Unit\Api\Query\Segments\ById;
 
 use Evgeek\Moysklad\Api\Query\Segments\ById\ByIdCommissionReportInSegment;
 use Evgeek\Moysklad\Api\Query\Segments\Methods\Nested\ReturnToCommissionerPositionsSegment;
+use Evgeek\Moysklad\Api\Query\Segments\Methods\Nested\AuditSegment;
 use Evgeek\Moysklad\Dictionaries\Segment;
 
 /** @covers \Evgeek\Moysklad\Api\Query\Segments\ById\ByIdCommissionReportInSegment */
@@ -15,6 +16,7 @@ class ByIdCommissionReportInSegmentTest extends ByIdSegmentTestCase
     {
         return [
             ['returntocommissionerpositions', ReturnToCommissionerPositionsSegment::class, Segment::RETURNTOCOMMISSIONERPOSITIONS],
+            ['audit', AuditSegment::class, Segment::AUDIT],
         ];
     }
 }

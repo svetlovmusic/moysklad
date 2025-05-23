@@ -4,6 +4,7 @@ namespace Evgeek\Tests\Unit\Api\Query\Segments\ById;
 
 use Evgeek\Moysklad\Api\Query\Segments\ById\ByIdOrganizationSegment;
 use Evgeek\Moysklad\Api\Query\Segments\Methods\Nested\AccountsSegment;
+use Evgeek\Moysklad\Api\Query\Segments\Methods\Nested\AuditSegment;
 use Evgeek\Moysklad\Dictionaries\Segment;
 
 /** @covers \Evgeek\Moysklad\Api\Query\Segments\ById\ByIdOrganizationSegment */
@@ -15,6 +16,7 @@ class ByIdOrganizationSegmentTest extends ByIdSegmentTestCase
     {
         return [
             ['accounts', AccountsSegment::class, Segment::ACCOUNTS],
+            ['audit', AuditSegment::class, Segment::AUDIT],
         ];
     }
 }
